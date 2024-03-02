@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunting API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h2 class="text-6xl font-bold text-orange-400 italic p-4">
+        <span class="text-orange-600">Phone</span> Hunting
+      </h2>
+    </header>
+    <!--  -->
+    <main class="container mx-auto mt-8">
+      <section class="bg-gray-100 p-4 m-4">
+        <input
+          id="search-field"
+          type="text"
+          placeholder="Search....here"
+          class="input input-bordered w-full max-w-xs"
+        />
+        <button
+          onclick="handleSearch()"
+          class="btn btn-active btn-primary w-32"
+        >
+          Search
+        </button>
+      </section>
+      <!-- search result -->
+      <section>
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-16"
+        >
+          <!-- phone card started  -->
+          <!-- <div class="card w-96 bg-gray-200 shadow-xl">
+            <figure>
+              <img
+                src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>  -->
+        </div>
+        <!-- show all button -->
+        <div id="show-all-container" class="hidden">
+          <button class="btn btn-accent">Show All</button>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="script/phone.js"></script>
+  </body>
+</html>
