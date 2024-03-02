@@ -42,7 +42,7 @@ const displayPhones = phones =>{
         <h2 class="card-title">${phone.phone_name
         }</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
+        <div class="card-actions justify-center">
           <button class="btn btn-primary">Buy Now</button>
         </div>
       </div>
@@ -51,16 +51,30 @@ const displayPhones = phones =>{
         phoneContainer.appendChild(phoneCard);
 
     })
+    // hide loading spinner 
+    toggleLoadingSpinner(false);
 
 }
 
 //*** handel search button */
 const handleSearch = ()=>{
     // console.log('search handel')
+    toggleLoadingSpinner(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     // console.log(searchText);
     loadPhone(searchText);
+}
+
+const toggleLoadingSpinner = (isLoading) =>{
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden');
+    }
+    else{
+        loadingSpinner.classList.add('hidden');
+    }
+
 }
 
 // loadPhone();

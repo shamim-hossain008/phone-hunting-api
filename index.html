@@ -33,8 +33,14 @@
           Search
         </button>
       </section>
-      <!-- search result -->
+
       <section>
+        <!-- spinner or loader -->
+        <div id="loading-spinner" class="text-center my-40 hidden">
+          <span class="loading loading-ring loading-lg"></span>
+        </div>
+
+        <!-- search result -->
         <div
           id="phone-container"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-16"
@@ -57,7 +63,7 @@
           </div>  -->
         </div>
         <!-- show all button -->
-        <div id="show-all-container" class="hidden">
+        <div id="show-all-container" class="hidden text-center my-8">
           <button class="btn btn-accent">Show All</button>
         </div>
       </section>
