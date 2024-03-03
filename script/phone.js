@@ -75,6 +75,25 @@ const showPhoneDetails = (phone) =>{
 
     const phoneName = document.getElementById('show-detail-phone-name');
     phoneName.innerText = phone.name;
+
+    const showDetailContainer = document.getElementById('show-detail-container')
+    showDetailContainer.innerHTML = `
+    <img src="${phone.image}" alt="" />
+    <p><span class="text-xl font-bold">Storage:</span>${phone?.mainFeatures
+        ?.storage}</p>
+        <p><span class="font-bold">Display Size:</span> ${phone?.mainFeatures?.displaySize
+        }</p>
+        <p><span class="font-bold">ChipSet:</span>${phone?.mainFeatures?.chipSet}</p>
+        <p><span class="font-bold">Memory:</span>${phone?.mainFeatures?.memory} </p>
+        <p><span class="font-bold">Slug:</span>${phone?.slug}</p>
+        <p><span class=""font-bold>Release Date:
+        </span>${phone?.releaseDate
+        }</p>
+        <p><span class="font-bold">Brand:</span>${phone?.brand}</p>
+        <p><span class="font-bold">GPS:</span>${phone?.others?.GPS || 'No GPS'}</p>
+        
+    `
+
     //show the modal
     show_derails_modal.showModal()
 }
